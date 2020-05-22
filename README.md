@@ -47,7 +47,8 @@ JaCoCo рассчитывает покрытие строк для классо�
 
 # Задача 2
 
-```<plugin>
+```xml
+<plugin>
 	<groupId>com.github.spotbugs</groupId>	
 	<artifactId>spotbugs-maven-plugin</artifactId>	
 	<version>4.0.0</version>	
@@ -60,9 +61,32 @@ JaCoCo рассчитывает покрытие строк для классо�
 				</goals>				
 			</execution>			
 		</executions>		
-</plugin>```
+</plugin>
 
 
 # Задача 3
 
 Сборка падает так как код неудовлетворяет стандартам кодирования.
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>3.1.1</version>
+        <configuration>
+           <configLocation>checkstyle.xml</configLocation>
+              <encoding>UTF-8</encoding>
+              <consoleOutput>true</consoleOutput>
+              <failsOnError>true</failsOnError>
+              <linkXRef>false</linkXRef>
+        </configuration>
+            <executions>
+                <execution>
+                    <id>check</id>
+                    <phase>verify</phase>
+                    <goals>
+                       <goal>check</goal>
+                    </goals>
+                 </execution>
+            </executions>
+</plugin>
