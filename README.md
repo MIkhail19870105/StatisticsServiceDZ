@@ -47,20 +47,21 @@ JaCoCo рассчитывает покрытие строк для классо�
 
 # Задача 2
 
-`<plugin>
-	<groupId>com.github.spotbugs</groupId>
-	<artifactId>spotbugs-maven-plugin</artifactId>
-	<version>4.0.0</version>
+```<plugin>
+	<groupId>com.github.spotbugs</groupId>	
+	<artifactId>spotbugs-maven-plugin</artifactId>	
+	<version>4.0.0</version>	
 		<executions>
-			<execution>
-			<id>check</id>
-			<phase>verify</phase>
-				<goals>
-					<goal>check</goal>
-				</goals>
-			</execution>
-		</executions>
-</plugin>`
+			<execution>			
+				<id>check</id>				
+				<phase>verify</phase>				
+				<goals>				
+				<goal>check</goal>				
+				</goals>				
+			</execution>			
+		</executions>		
+</plugin>```
+
 
 # Задача 3
 
